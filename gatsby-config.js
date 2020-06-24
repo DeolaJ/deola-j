@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `DeolaJ`,
     description: `Portfolio website of Adeola Adeyemo`,
-    author: `Deola`,
+    author: `Adeola Adeyemo`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

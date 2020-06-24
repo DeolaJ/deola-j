@@ -4,17 +4,18 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import Nav from '../components/Nav/Nav'
-import Footer from '../components/Footer/Footer'
-import Body from '../components/Body/Body'
+import Home from '../components/Homepage/Home/home'
+import About from '../components/Homepage/About/about'
+import Portfolio from '../components/Homepage/Portfolio/portfolio'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-
-    <Nav />
-
-    <Body />
+    <Home />
+    <About />
+    <Portfolio />
+    <Link to="/art">Go to my art page</Link>
+    <Link to="/comics">Go to my comics page</Link>
   </Layout>
 )
 

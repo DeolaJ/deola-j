@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Contact = () => (
+const Portfolio = () => (
   <section className={"section"}>
-    Contact
+    Portfolio
   </section>
 )
 
-export default Contact
+export default Portfolio

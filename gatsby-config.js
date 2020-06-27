@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `DeolaJ`,
     description: `Portfolio website of Adeola Adeyemo`,
-    author: `Deola`,
+    author: `Adeola Adeyemo`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,7 +14,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout.js')
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -26,6 +35,13 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'posts',
+        path: 'posts'
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

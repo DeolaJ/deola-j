@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import useSiteMetadata from './hooks/useSiteMetadata'
 import { Global, css } from '@emotion/core'
 import { Helmet } from 'react-helmet'
 import Footer from './Footer/footer'
@@ -15,17 +15,7 @@ import Contact from './Contact/contact'
 import Header from "./header"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `)
-  console.log(data)
+  const { title, description } = useSiteMetadata()
 
   return (
     <>
@@ -654,10 +644,11 @@ const Layout = ({ children }) => {
         }        
       `} />
       <Helmet>
-        <title>{data.site.siteMetadata.title}</title>
-        <meta name="description" content={data.site.siteMetadata.description} />
+        <html lang="en" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
       </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={title} />
       <main 
         css={css`
           margin: 0 auto;

@@ -652,13 +652,15 @@ const Layout = ({ children }) => {
       <main 
         css={css`
           margin: 0 auto;
-          max-width: 90vw;
+          max-width: 82vw;
           padding: 0 1.0875rem 1.45rem;
         `}
       >
-        {children}
+        <>
+          {children}
+          <Contact />
+        </>
       </main>
-      <Contact />
       <Footer />
     </>
   )

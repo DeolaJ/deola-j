@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `DeolaJ`,
-    description: `Portfolio website of Adeola Adeyemo`,
+    title: `Adeola J. Adeyemo`,
+    description: `The portfolio website of Adeola Joseph Adeyemo`,
     author: `Adeola Adeyemo`,
   },
   plugins: [

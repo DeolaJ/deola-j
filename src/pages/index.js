@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import Home from '../components/Homepage/Home/home'
 import About from '../components/Homepage/About/about'
 import Portfolio from '../components/Homepage/Portfolio/portfolio'
+import PostPreview from '../components/post-preview'
 
 const IndexPage = () => {
   const posts = usePosts()
@@ -19,14 +20,12 @@ const IndexPage = () => {
       <About />
       <Portfolio />
 
-      <h2>Read my blog</h2>
+      {/* <h2>Read my blog</h2>
       {
         posts.map(post => (
-          <pre>{JSON.stringify(post, null, 2)}</pre>
+          <PostPreview key={post.slug} post={post} />
         ))
-      }
-      <Link to="/art">Go to my art page</Link>
-      <Link to="/comics">Go to my comics page</Link>
+      } */}
     </Layout>
   )
 }

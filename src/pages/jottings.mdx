@@ -7,3 +7,23 @@ To use regular files in the data tree, install the following plugin
     npm i gatsby-source-filesystem
 
 In GraphQl, there are nodes (data) and edges (relationship)
+
+The gatsby-nodejs file helps to run the node apis. Ensure to not use jsx in there.
+
+gatsby-source-filesystem helps us to associate name to folders and read it from graphql in gatsby
+
+allFiles(filter: { sourceInstanceName: { eq: "posts"}}) {
+    nodes {
+        childMdx {
+            frontMatter {
+                title
+            }
+        }
+    }
+}
+
+In graphql, the query parameters can be filtered (eq, ne, regex etc)
+
+Graphql variables are created using $slug: String!
+
+Images are stored in the static folder

@@ -222,7 +222,8 @@ const Layout = ({ children }) => {
         }
         body {
           color: hsla(0, 0%, 0%, 0.8);
-          font-family: georgia, serif;
+          font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           font-weight: normal;
           word-wrap: break-word;
           font-kerning: normal;
@@ -252,8 +253,6 @@ const Layout = ({ children }) => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 2.25rem;
@@ -269,8 +268,6 @@ const Layout = ({ children }) => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 1.62671rem;
@@ -286,8 +283,6 @@ const Layout = ({ children }) => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 1.38316rem;
@@ -303,8 +298,6 @@ const Layout = ({ children }) => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 1rem;
@@ -320,8 +313,6 @@ const Layout = ({ children }) => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 0.85028rem;
@@ -337,22 +328,10 @@ const Layout = ({ children }) => {
           padding-top: 0;
           margin-bottom: 1.45rem;
           color: inherit;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           font-weight: bold;
           text-rendering: optimizeLegibility;
           font-size: 0.78405rem;
           line-height: 1.1;
-        }
-        hgroup {
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0;
-          padding-bottom: 0;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0;
-          margin-bottom: 1.45rem;
         }
         ul {
           margin-left: 1.45rem;
@@ -408,73 +387,6 @@ const Layout = ({ children }) => {
           padding-top: 0;
           margin-bottom: 1.45rem;
         }
-        figure {
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0;
-          padding-bottom: 0;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0;
-          margin-bottom: 1.45rem;
-        }
-        pre {
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0;
-          margin-bottom: 1.45rem;
-          font-size: 0.85rem;
-          line-height: 1.42;
-          background: hsla(0, 0%, 0%, 0.04);
-          border-radius: 3px;
-          overflow: auto;
-          word-wrap: normal;
-          padding: 1.45rem;
-        }
-        table {
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0;
-          padding-bottom: 0;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0;
-          margin-bottom: 1.45rem;
-          font-size: 1rem;
-          line-height: 1.45rem;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        fieldset {
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0;
-          padding-bottom: 0;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0;
-          margin-bottom: 1.45rem;
-        }
-        blockquote {
-          margin-left: 1.45rem;
-          margin-right: 1.45rem;
-          margin-top: 0;
-          padding-bottom: 0;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0;
-          margin-bottom: 1.45rem;
-        }
-        form {
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0;
-          padding-bottom: 0;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0;
-          margin-bottom: 1.45rem;
-        }
         noscript {
           margin-left: 0;
           margin-right: 0;
@@ -508,33 +420,14 @@ const Layout = ({ children }) => {
           border: none;
           height: 1px;
         }
-        address {
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0;
-          padding-bottom: 0;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0;
-          margin-bottom: 1.45rem;
-        }
         b {
           font-weight: bold;
         }
         strong {
           font-weight: bold;
         }
-        dt {
-          font-weight: bold;
-        }
-        th {
-          font-weight: bold;
-        }
         li {
           margin-bottom: calc(1.45rem / 2);
-        }
-        ol li {
-          padding-left: 0;
         }
         ul li {
           padding-left: 0;
@@ -561,81 +454,42 @@ const Layout = ({ children }) => {
         li > p {
           margin-bottom: calc(1.45rem / 2);
         }
-        code {
-          font-size: 0.85rem;
-          line-height: 1.45rem;
+        .section {
+          padding: 2.5rem 0;
         }
-        kbd {
-          font-size: 0.85rem;
-          line-height: 1.45rem;
+        .section-title {
+          margin-bottom: .8125rem;
+          font-size: .875rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: .06em;
         }
-        samp {
-          font-size: 0.85rem;
-          line-height: 1.45rem;
+        .section-title-sub {
+          margin-bottom: 1.875rem;
+          font-weight: bold;
+          font-size: 2.2rem;
+          letter-spacing: -0.02em;
+          line-height: 1.31818182;
         }
-        abbr {
-          border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-          cursor: help;
-        }
-        acronym {
-          border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-          cursor: help;
-        }
-        abbr[title] {
-          border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-          cursor: help;
-          text-decoration: none;
-        }
-        thead {
-          text-align: left;
-        }
-        td,
-        th {
-          text-align: left;
-          border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-          font-feature-settings: "tnum";
-          -moz-font-feature-settings: "tnum";
-          -ms-font-feature-settings: "tnum";
-          -webkit-font-feature-settings: "tnum";
-          padding-left: 0.96667rem;
-          padding-right: 0.96667rem;
-          padding-top: 0.725rem;
-          padding-bottom: calc(0.725rem - 1px);
-        }
-        th:first-of-type,
-        td:first-of-type {
-          padding-left: 0;
-        }
-        th:last-child,
-        td:last-child {
-          padding-right: 0;
-        }
-        tt,
-        code {
-          background-color: hsla(0, 0%, 0%, 0.04);
+        .main-button {
+          color: rgb(31, 32, 68);
+          border: 1px solid rgb(31, 32, 68);
           border-radius: 3px;
-          font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-            "Liberation Mono", Menlo, Courier, monospace;
-          padding: 0;
-          padding-top: 0.2em;
-          padding-bottom: 0.2em;
+          padding: .8rem 1.25rem;
+          background: transparent;
+          cursor: pointer;
+
+          .sm {
+            font-size: 13px;
+            padding: 0.75rem 1rem;
+          }
         }
-        pre code {
-          background: none;
-          line-height: 1.42;
-        }
-        code:before,
-        code:after,
-        tt:before,
-        tt:after {
-          letter-spacing: -0.2em;
-          content: " ";
-        }
-        pre code:before,
-        pre code:after,
-        pre tt:before,
-        pre tt:after {
-          content: "";
+        .colored {
+          color: rgb(31, 32, 68);
+
+          + {
+            margin-left: .5rem;
+          }
         }
         @media only screen and (max-width: 480px) {
           html {
@@ -654,6 +508,10 @@ const Layout = ({ children }) => {
           margin: 0 auto;
           max-width: 82vw;
           padding: 0 1.0875rem 1.45rem;
+
+          @media (max-width: 768px) {
+            max-width: none;
+          }
         `}
       >
         <>

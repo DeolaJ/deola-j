@@ -22,8 +22,12 @@ const Portfolio = () => {
 
   return (
   <section className={"section"}>
-    <h3>Portfolio</h3>
-    <h2>Some of my latest work.</h2>
+    <h3 className="section-title">
+      Portfolio
+    </h3>
+    <h2 className="section-title-sub">
+      Some of my latest work.
+    </h2>
     <div css={css`
       display: flex;
       justify-content: space-between;

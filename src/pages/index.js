@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import Home from '../components/Homepage/Home/home'
 import About from '../components/Homepage/About/about'
 import Portfolio from '../components/Homepage/Portfolio/portfolio'
+import BlogPosts from '../components/blogposts'
 import PostPreview from '../components/post-preview'
 
 const IndexPage = () => {
@@ -19,6 +20,7 @@ const IndexPage = () => {
       <Home />
       <About />
       <Portfolio />
+      <BlogPosts />
 
       {/* <h2>Read my blog</h2>
       {

@@ -93,7 +93,6 @@ const Portfolio = () => {
       }
     }
   `);
-  console.log(data);
   const projects = [
     {
       id: 1,
@@ -157,7 +156,6 @@ const Portfolio = () => {
       {
         projects.map(project => {
           const fluidImage = data.allImageSharp.edges.find(edge => edge.node.fluid.src.includes(project.img));
-          console.log(fluidImage)
           return (
             <div key={project.id}>
               <Img fluid={fluidImage.node.fluid} />

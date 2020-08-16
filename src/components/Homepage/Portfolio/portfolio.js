@@ -1,5 +1,6 @@
 import React from 'react'
-import { css } from "@emotion/core"
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import styled from '@emotion/styled'
 
 const StackElement = styled.div`
@@ -14,28 +15,29 @@ const StackWrapper = styled.div`
   align-items: center;
 `
 
+const ContentWrapper = styled.div`
+  padding: 1.5rem;
+
+  @media (max-width: 600px) {
+    padding: .8rem;
+  }
+`
+
 const ProjectWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
+  .gatsby-image-wrapper {
+    border-radius: .4rem .4rem 0 0;
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, .05);
+  }
+
   > div {
-    padding: 1.5rem;
     flex-basis: 45%;
     box-shadow: 0 2px 11px 2px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.5rem;
-  }
-
-  @media (max-width: 620px) {
-    > div {
-      flex-basis: 80%;
-    }
-  }
-
-  @media (max-width: 400px) {
-    > div {
-      flex-basis: 100%;
-    }
+    margin-bottom: 3rem;
+    border-radius: .4rem;
   }
 
   a {
@@ -50,50 +52,96 @@ const ProjectWrapper = styled.div`
   h4 {
     font-size: 1.1rem;
     letter-spacing: .5px;
+    margin-bottom: 1rem;
     text-transform: uppercase;
   }
 
   p {
-    font-size: .9rem;
+    font-size: .85rem;
+    margin-bottom: .7rem;
+  }
+
+  @media (max-width: 620px) {
+    > div {
+      flex-basis: 80%;
+    }
+
+    div h4 {
+      font-size: .95rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    > div {
+      flex-basis: 100%;
+    }
   }
 `
 
 const Portfolio = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allImageSharp {
+        edges {
+          node {
+            id
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  `);
+  console.log(data);
   const projects = [
     {
       id: 1,
-      title: "Better and Stronger",
-      link: "https://betterandstronger.netlify.app",
-      description: "SPA for generating a post COVID optimism message",
-      stack: "React, Netlify, Lambda Functions, Cloudinary"
+      title: "Star Wars",
+      link: "https://starwars-deolaj.netlify.app",
+      description: "SPA built on the Star wars API for characters, starships, and planets",
+      stack: "React, Netlify, Redux",
+      img: "starwars.png",
     },
     {
       id: 2,
       title: "Better and Stronger",
-      link: "https://betterandstronger.web.app",
+      link: "https://betterandstronger.netlify.app",
       description: "SPA for generating a post COVID optimism message",
-      stack: "React, Firebase, Cloud Functions, Cloudinary"
+      stack: "React, Netlify, Redux, Lambda Functions, Cloudinary",
+      img: "bas.png",
     },
     {
       id: 3,
-      title: "Nielles Backyard Cookout",
-      link: "https://niellescookout.com",
-      description: "Event website for information, polls, and reservation of tickets",
-      stack: "React, Firebase, Cloud Functions, Flutterwave"
+      title: "Better and Stronger",
+      link: "https://betterandstronger.web.app",
+      description: "SPA for generating a post COVID optimism message",
+      stack: "React, Firebase, Redux, Cloud Functions, Cloudinary",
+      img: "bas.png"
     },
     {
       id: 4,
-      title: "Fitsbydee",
-      link: "https://fitsbydee.com",
-      description: "Landing page for Fitsbydee",
-      stack: "React, Firebase, Cloud Functions"
+      title: "Nielles Backyard Cookout",
+      link: "https://niellescookout.com",
+      description: "Event website for information, polls, and reservation of tickets",
+      stack: "React, Firebase, Cloud Functions, Semantic UI, Flutterwave",
+      img: "nielles.png"
     },
     {
       id: 5,
+      title: "Fitsbydee",
+      link: "https://fitsbydee.com",
+      description: "This is the Landing page for Fitsbydee's clothing line",
+      stack: "React, Firebase, Cloud Functions, Semantic UI",
+      img: "fbd.png"
+    },
+    {
+      id: 6,
       title: "Firstresumeaid",
       link: "https://firstresumeaid.com",
       description: "Landing page for Firstresumeaid with service payment processing",
-      stack: "React, Firebase, Cloud Functions, Paystack"
+      stack: "React, Firebase, Cloud Functions, Semantic UI, Paystack",
+      img: "fra.png"
     }
   ]
 
@@ -107,23 +155,30 @@ const Portfolio = () => {
     </h2>
     <ProjectWrapper>
       {
-        projects.map(project => (
-          <div key={project.id}>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <h4>{project.title}</h4>
-            </a>
-            <p>{project.description}</p>
-            <StackWrapper>
-              {
-                project.stack.split(", ").map(stack => (
-                  <StackElement key={`${project.id}-${stack}`}>
-                    {stack}
-                  </StackElement>
-                ))
-              }
-            </StackWrapper>
-          </div>
-        ))
+        projects.map(project => {
+          const fluidImage = data.allImageSharp.edges.find(edge => edge.node.fluid.src.includes(project.img));
+          console.log(fluidImage)
+          return (
+            <div key={project.id}>
+              <Img fluid={fluidImage.node.fluid} />
+              <ContentWrapper>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <h4>{project.title}</h4>
+                </a>
+                <p>{project.description}</p>
+                <StackWrapper>
+                  {
+                    project.stack.split(", ").map(stack => (
+                      <StackElement key={`${project.id}-${stack}`}>
+                        {stack}
+                      </StackElement>
+                    ))
+                  }
+                </StackWrapper>
+              </ContentWrapper>
+            </div>
+          )
+        })
       }
     </ProjectWrapper>
   </section>

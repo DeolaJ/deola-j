@@ -15,7 +15,7 @@ import Contact from './Contact/contact'
 import Header from "./header"
 
 const Layout = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description, keywords } = useSiteMetadata()
 
   return (
     <>
@@ -491,16 +491,25 @@ const Layout = ({ children }) => {
             margin-left: .5rem;
           }
         }
+        @media only screen and (max-width: 768px) {
+          .section.home {
+            padding-top: 1rem;
+          }
+          .section-title-sub {
+            font-size: 2rem;
+          }
+        } 
         @media only screen and (max-width: 480px) {
           html {
             font-size: 100%;
           }
-        }        
+        }      
       `} />
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
       </Helmet>
       <Header siteTitle={title} />
       <main 
@@ -511,6 +520,7 @@ const Layout = ({ children }) => {
 
           @media (max-width: 768px) {
             max-width: none;
+            padding: 0 1.5rem 1.45rem;
           }
         `}
       >

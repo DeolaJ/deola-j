@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Adeola J. Adeyemo`,
-    description: `The portfolio website of Adeola Joseph Adeyemo`,
+    description: `Portfolio website of Adeola Joseph Adeyemo, Frontend Developer`,
+    keywords: `Adeola, Adeyemo, Joseph, Adeola Adeyemo, Adeola Adeyemo J., front end, frontend, lagos, nigeria, front end developer, developer, dejoe, dejoe art, de.joe, dejoe_art, deola art, deolaj, deola, balloon comics, balloon_comics, ballooon comics, comics, banter republic`,
     author: `Adeola Adeyemo`,
   },
   plugins: [

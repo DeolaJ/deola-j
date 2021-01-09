@@ -121,7 +121,7 @@ const Portfolio = () => {
     {
       id: 4,
       title: "Nielles Backyard Cookout",
-      link: "https://niellescookout.com",
+      link: "https://nielle-19.web.app/",
       description: "Event website for information, polls, and reservation of tickets",
       stack: "React, Firebase, Cloud Functions, Semantic UI, Flutterwave",
       img: "nielles.png"
@@ -129,7 +129,7 @@ const Portfolio = () => {
     {
       id: 5,
       title: "Fitsbydee",
-      link: "https://fitsbydee.com",
+      link: "https://fitsbydee.netlify.app/",
       description: "This is the Landing page for Fitsbydee's clothing line",
       stack: "React, Firebase, Cloud Functions, Semantic UI",
       img: "fbd.png"
@@ -137,7 +137,7 @@ const Portfolio = () => {
     {
       id: 6,
       title: "Firstresumeaid",
-      link: "https://firstresumeaid.com",
+      link: "https://firstresumeaid.netlify.app/",
       description: "Landing page for Firstresumeaid with service payment processing",
       stack: "React, Firebase, Cloud Functions, Semantic UI, Paystack",
       img: "fra.png"
